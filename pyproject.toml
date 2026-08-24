@@ -1,0 +1,20 @@
+[project]
+name = "doc-extraction-ocr-vs-vlm"
+version = "0.1.0"
+description = "OCR-then-LLM vs end-to-end VLM extraction on synthetic invoices and shipping documents: field-level accuracy, cost per page, and the failure profile."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
